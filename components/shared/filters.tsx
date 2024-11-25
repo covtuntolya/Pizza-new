@@ -4,12 +4,10 @@ import React, { useState } from 'react'
 import { Title } from './title';
 import { Input, RangeSlider } from '../ui';
 import { ChecboxFilterGroup } from './checkbox-filter-group';
-import { useIngredients } from '@/hooks/use-ingredients';
 
 import qs from 'qs'
-import { useRouter, useSearchParams } from 'next/navigation';
-import { useFilters } from '@/hooks/use-filters';
-import { useQueryFilters } from '@/hooks/use-query-filters';
+import { useRouter } from 'next/navigation';
+import { useQueryFilters, useFilters, useIngredients } from '@/hooks';
 
 interface Props {
   className?:string;

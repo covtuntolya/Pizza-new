@@ -4,22 +4,24 @@ import { cn } from '@/lib/utils';
 import React from 'react'
 
 import { useCategoryStore } from '@/store/category';
+import { Category } from '@prisma/client';
 
 interface Props {
+  cats: Category[];
   className?:string;
 } 
 
-export const Categories:React.FC<Props>=({className})=> {
+export const Categories:React.FC<Props>=({cats, className})=> {
   
-  const cats=[
-    {id: 1, name: 'Пиццы' },
-    {id: 2, name: 'Комбо'},
-    {id: 3, name: 'Закуски'},
-    {id: 4, name: 'Коктейли'},
-    {id: 5, name: 'Кофе'},
-    {id: 6, name: 'Напитки'},
-    {id: 7, name: 'Десерты'},
-]
+//  const cats=[
+//    {id: 1, name: 'Пиццы' },
+//    {id: 2, name: 'Комбо'},
+//    {id: 3, name: 'Закуски'},
+//    {id: 4, name: 'Коктейли'},
+//    {id: 5, name: 'Кофе'},
+//    {id: 6, name: 'Напитки'},
+//    {id: 7, name: 'Десерты'},
+//]
   const activeIndex=useCategoryStore(state=>state.activeId)
 
   return (
